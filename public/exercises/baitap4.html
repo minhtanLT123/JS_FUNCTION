@@ -1,1 +1,53 @@
-<h1>bt4</h1>
+<div class="container">
+
+    <div class="form-group flex flex-col gap-y-4 ">
+        <div>
+            <h2>🕸️ Tính tiền cáp</h2>
+        </div>
+
+        <div class="flex flex-row gap-x-4 ">
+            <div class="">
+                <input type="number" id="days" placeholder="Điểm chuẩn"
+                    class="border-none focus:outline-none bg-white p-2 rounded shadow">
+            </div>
+            <div class=" border-none focus:outline-none bg-white p-2 rounded shadow">
+                <input list="khuvuc" name="khuvuc" placeholder="Chọn khu vực">
+                <datalist id="khuvuc">
+                    <option value="A">
+                    <option value="B">
+                    <option value="C">
+                </datalist>
+            </div>
+
+            <div>
+                <input list="doituong" name="doituong" placeholder="Chọn đối tượng"
+                    class="border-none focus:outline-none bg-white p-2 rounded shadow">
+                <datalist id="doituong">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                </datalist>
+            </div>
+        </div>
+        <div class="flex flex-row gap-x-4">
+            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow" type="number" id="days"
+                    placeholder="Điểm môn thứ 1"></div>
+            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow" type="number" id="days"
+                    placeholder="Điểm môn thứ 2"></div>
+            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow" type="number" id="days"
+                    placeholder="Điểm môn thứ 3"></div>
+
+        </div>
+        <div>
+            <button onclick="calcSalary()"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">Kết
+                Quả</button>
+        </div>
+
+        <div id="result" class="result">
+            <p>👉</p>
+        </div>
+
+    </div>
+
+</div>

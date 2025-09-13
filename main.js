@@ -1,8 +1,8 @@
 
 let type = "";
-
+let html = "";
 function loadExercise(type) {
-    let html = "";
+
     let file = "";
 
     switch (type) {

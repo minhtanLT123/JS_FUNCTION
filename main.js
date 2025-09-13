@@ -7,16 +7,16 @@ function loadExercise(type) {
 
     switch (type) {
         case "baiTap1":
-            file = "exercises/baiTap1.html";
+            file = "./public/exercises/baiTap1.html";
             break;
         case "baiTap2":
-            file = "exercises/baiTap2.html";
+            file = "./public/exercises/baiTap2.html";
             break;
         case "baiTap3":
-            file = "exercises/baiTap3.html";
+            file = "./public/exercises/baiTap3.html";
             break;
         case "baiTap4":
-            file = "exercises/baiTap4.html";
+            file = "./public/exercises/baiTap4.html";
             break;
         default:
             alert("Không tìm thấy bài tập!");

@@ -1,28 +1,43 @@
-<div class="container">
+<div class="form-group flex flex-col gap-y-4 ">
+    <div>
+        <h1 class="font-semibold text-lg">💰 Bài tập 3: Tính thuế thu nhập cá nhân</h1>
 
-    <div class="form-group flex flex-col gap-y-4 ">
-        <div>
-            <h2>💰 Bài tập 3: Tính thuế thu nhập cá nhân</h2>
-        </div>
-        <div class="flex flex-row gap-x-4">
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="string"
-                    id="name" placeholder="Họ và tên"></div>
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
-                    id="days" placeholder="Tổng thu nhập năm"></div>
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
-                    id="days" placeholder="Số người phụ thuộc"></div>
+    </div>
+    <div>
 
-        </div>
-        <div>
-            <button onclick="calcSalary()"
-                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">Tính
-                tiền thuế</button>
-        </div>
+        Thu nhập chịu thuế (triệu) Thuế suất (%) <br>
+        Đến 60 5(%) <br>
+        Trên 60 đến 120 10(%) <br>
+        Trên 120 đến 210 15(%) <br>
+        Trên 210 đến 384 20(%) <br>
+        Trên 384 đến 624 25(%) <br>
+        Trên 624 đến 960 30(%) <br>
+        Trên 960 35(%) <br>
 
-        <div id="result" class="result">
-            <p>👉</p>
-        </div>
+    </div>
+    <div class="flex flex-row gap-x-4">
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="text"
+                id="name_tncn" placeholder="Họ và tên"></div>
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
+                id="thunhap" placeholder="Tổng thu nhập năm"></div>
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
+                id="nguoiphuthuoc" placeholder="Số người phụ thuộc"></div>
 
+    </div>
+    <div>
+        <button onclick="tinhThueTNCN()"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">Tính
+            tiền thuế</button>
+    </div>
+
+    <div class="result">
+        <p>👉
+            <span id="showname_tncd"></span>
+
+            <span id="result_ttncn"></span>
+
+
+        </p>
     </div>
 
 </div>

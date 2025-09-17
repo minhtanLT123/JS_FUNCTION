@@ -89,7 +89,7 @@ function tinhDiem() {
 
 // bài tập 2 - tính tiền điện
 function tinhTienDien() {
-    const nguoiDung = document.getElementById("nametd").value;
+    let nguoiDung = document.getElementById("name_td").value;
     const soKw = document.getElementById("sokw").value * 1;
     let tienDien = document.getElementById("result_td") * 1;
 
@@ -117,8 +117,44 @@ function tinhTienDien() {
         console.log("vui lòng nhập số điện ");
     }
     console.log(tienDien);
+    console.log(nguoiDung);
+    showname_td.innerHTML = `<span> Họ Tên Khách hàng:  ${nguoiDung} -  </span>`;
+    result_td.innerHTML = `<span> có tổng tiền điện là:  ${tienDien.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })} </span>`;
 
-    nametd.innerHTML = `<span> Tổng tiền điện của ${nguoiDung} là: </span>`;
-    result_td.innerHTML = `<span> ${tienDien} </span>`;
+}
+
+// bài tập 3: tính thuế thu nhập cá Nhân
+
+function tinhThueTNCN() {
+    const nguoiTinhThue = document.getElementById("name_tncn").value;
+    const thuNhap = document.getElementById("thunhap").value * 1;
+    const nguoiPT = document.getElementById("nguoiphuthuoc").value * 1;
+    let thueTNCN = 0;
+    if (thuNhap <= 60) { // đến 60 triệu - 5(%)
+        thueTNCN = (thuNhap * 0.05) - nguoiPT * 1.6;
+
+    }
+    else if (60 < thuNhap && thuNhap <= 120) { //Trên 60 đến 120 - 10(%)
+        thueTNCN = (thuNhap * 0.1) - nguoiPT * 1.6;
+    }
+    else if (120 < thuNhap && thuNhap <= 210) { //Trên 120 đến 210 - 15(%)
+        thueTNCN = (thuNhap * 0.15) - nguoiPT * 1.6;
+    }
+    else if (210 < thuNhap && thuNhap <= 384) { //Trên 210 đến 384 -20(%)
+        thueTNCN = (thuNhap * 0.2) - nguoiPT * 1.6;
+    }
+    else if (384 < thuNhap && thuNhap <= 624) { //Trên 384 đến 624 - 25(%)
+        thueTNCN = (thuNhap * 0.25) - nguoiPT * 1.6;
+    }
+    else if (624 < thuNhap && thuNhap <= 960) { //Trên 624 đến 960 - 30(%)
+        thueTNCN = (thuNhap * 0.3) - nguoiPT * 1.6;
+    }
+    else if (960 < thuNhap) {//Trên 960 - 35(%)
+        thueTNCN = (thuNhap * 0.35) - nguoiPT * 1.6;
+
+
+    }
+    showname_tncd.innerHTML = `<span> Họ Tên Khách hàng:  ${nguoiTinhThue} -  </span>`;
+    result_ttncn.innerHTML = `<span> có thuế thu nhập cá nhân là:  ${thueTNCN.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })} </span>`;
 
 }

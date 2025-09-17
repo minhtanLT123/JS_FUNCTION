@@ -1,39 +1,36 @@
-<div class="container">
+<div class="form-group flex flex-col gap-y-4 ">
+    <div>
+        <h1 class="font-semibold text-lg">🔋 Bài tập 2: Tính tiền điện</h1>
+    </div>
+    <div>
+        <p>
+            Tính và xuất Tiền trả theo quy tắc: <br>
+            · 50kw đầu : 500d/kw <br>
+            · 50kw kế : 650d/kw <br>
+            · 100kw Kế : 850d/kw <br>
+            · 150kw kế: 1100d/kw <br>
+            Còn lại : 1300d/kw
+        </p>
+    </div>
 
-    <div class="form-group flex flex-col gap-y-4 ">
-        <div>
-            <h2>🔋 Bài tập 2: Tính tiền điện</h2>
-        </div>
-        <div>
-            <p>
-                Tính và xuất Tiền trả theo quy tắc: <br>
-                · 50kw đầu : 500d/kw <br>
-                · 50kw kế : 650d/kw <br>
-                · 100kw Kế : 850d/kw <br>
-                · 150kw kế: 1100d/kw <br>
-                Còn lại : 1300d/kw
-            </p>
-        </div>
+    <div class="flex flex-row gap-x-4">
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="text"
+                id="name_td" placeholder="Nhập họ tên"></div>
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number" id="sokw"
+                placeholder="Nhập số Kw"></div>
 
-        <div class="flex flex-row gap-x-4">
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="string"
-                    id="nametd" placeholder="Nhập họ tên"></div>
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
-                    id="sokw" placeholder="Nhập số Kw"></div>
+    </div>
+    <div>
+        <button onclick="tinhTienDien()"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">Tính
+            tiền</button>
+    </div>
 
-        </div>
-        <div>
-            <button onclick="tinhTienDien()"
-                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">Tính
-                tiền</button>
-        </div>
-
-        <div id="" class="result_td">
-            <p>👉 <span id="nametd"></span>
-                <span id="result_td"></span>
-            </p>
-        </div>
-
+    <div>
+        <span id="showname_td">👉
+        </span>
+        <span id="result_td">
+        </span>
     </div>
 
 </div>

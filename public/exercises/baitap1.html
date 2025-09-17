@@ -1,66 +1,62 @@
-<div class="container">
+<div class="form-group flex flex-col gap-y-4 ">
 
-    <div class="form-group flex flex-col gap-y-4 ">
+    <div>
+        <h1 class="font-semibold text-lg">📋 Bài tập 1: Quản lý tuyển sinh</h1>
+    </div>
+    <div>
+        <p>Trong kỳ thi tuyển, một thí sinh sẽ trúng truyển nếu có điểm tổng kết lớn hơn hoặc bằng điểm chuẩn và
+            không có môn nào điểm 0.</br>
+            - Điểm tổng kết là tổng điểm của 3 môn thi và điểm ưu tiên. <br>
+            - Điểm ưu tiên bao gồm điểm ưu tiên theo khu vực và điểm ưu tiên theo đối tượng.</p>
 
-        <div>
-            <h1 class="font-semibold text-lg">📋 Quản lý tuyển sinh</h1>
-        </div>
-        <div>
-            <p>Trong kỳ thi tuyển, một thí sinh sẽ trúng truyển nếu có điểm tổng kết lớn hơn hoặc bằng điểm chuẩn và
-                không có môn nào điểm 0.</br>
-                - Điểm tổng kết là tổng điểm của 3 môn thi và điểm ưu tiên. <br>
-                - Điểm ưu tiên bao gồm điểm ưu tiên theo khu vực và điểm ưu tiên theo đối tượng.</p>
+        <img class="w-100" src="/images/diemUuTien.png" alt="">
+    </div>
 
-            <img class="w-100" src="/images/diemUuTien.png" alt="">
-        </div>
-
-        <div class="flex flex-row gap-x-4 ">
-            <div class="">
-                <input type="number" id="diemchuan" placeholder="Điểm chuẩn"
-                    class="border-none focus:outline-none bg-white p-2 rounded shadow">
-            </div>
-            <div class=" border-none focus:outline-none bg-white p-2 rounded shadow">
-                <input list="khuvuc" id="khuvucInput" placeholder="Chọn khu vực">
-                <datalist id="khuvuc">
-                    <option value="A">
-                    <option value="B">
-                    <option value="C">
-                </datalist>
-            </div>
-
-            <div>
-                <input list="doituong" id="doituongInput" placeholder="Chọn đối tượng"
-                    class="border-none focus:outline-none bg-white p-2 rounded shadow">
-                <datalist id="doituong">
-                    <option value="1">
-                    <option value="2">
-                    <option value="3">
-                </datalist>
-            </div>
-        </div>
-        <div class="flex flex-row gap-x-4">
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow" type="number" id="diemmon1"
-                    placeholder="Điểm môn thứ 1"></div>
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow" type="number" id="diemmon2"
-                    placeholder="Điểm môn thứ 2"></div>
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow" type="number" id="diemmon3"
-                    placeholder="Điểm môn thứ 3"></div>
-
-        </div>
-        <div>
-            <button onclick="tinhDiem()"
-                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">Kết
-                Quả</button>
-        </div>
-
+    <div class="flex flex-row gap-x-4 ">
         <div class="">
-            <p>👉<span id="result"></span> </p>
+            <input type="number" id="diemchuan" placeholder="Điểm chuẩn"
+                class="border-none focus:outline-none bg-white p-2 rounded shadow text-base">
         </div>
+        <div class="">
+            <input list="khuvuc" id="khuvucInput" placeholder="Chọn khu vực"
+                class="border-none focus:outline-none bg-white p-2 rounded shadow text-base">
+            <datalist id="khuvuc">
+                <option value="A">
+                <option value="B">
+                <option value="C">
+            </datalist>
+        </div>
+        <div class="">
+            <input list="doituong" id="doituongInput" placeholder="Chọn đối tượng"
+                class="border-none focus:outline-none bg-white p-2 rounded shadow text-base">
+            <datalist id="doituong">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+            </datalist>
+        </div>
+    </div>
+    <div class="flex flex-row gap-x-4">
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
+                id="diemmon1" placeholder="Điểm môn thứ 1"></div>
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
+                id="diemmon2" placeholder="Điểm môn thứ 2"></div>
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
+                id="diemmon3" placeholder="Điểm môn thứ 3"></div>
 
     </div>
-    <div class="flex justify-center items-center ">
-        <img id="tuyensinhPic" src="" alt="">
-
+    <div>
+        <button onclick="tinhDiem()"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">Kết
+            Quả</button>
     </div>
+
+    <div class="">
+        <p>👉<span id="result"></span> </p>
+    </div>
+
+</div>
+<div class="flex justify-center items-center ">
+    <img id="tuyensinhPic" src="" alt="">
 
 </div>

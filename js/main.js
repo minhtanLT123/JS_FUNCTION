@@ -88,3 +88,37 @@ function tinhDiem() {
 }
 
 // bài tập 2 - tính tiền điện
+function tinhTienDien() {
+    const nguoiDung = document.getElementById("nametd").value;
+    const soKw = document.getElementById("sokw").value * 1;
+    let tienDien = document.getElementById("result_td") * 1;
+
+    if (soKw <= 50) { // 50 Kw đầu - tổng 50 Kw
+        tienDien = 500 * soKw;
+
+    }
+    else if (50 < soKw && soKw <= 100) { // 50 Kw kế (tổng 100 Kw)
+        tienDien = (500 * 50) + (650 * (soKw - 50));
+
+
+    }
+    else if (100 < soKw && soKw <= 200) {// 100 Kw kế (tổng 200 Kw)
+        tienDien = (500 * 50) + (650 * 50) + (850 * (soKw - 100));
+
+    }
+    else if (200 < soKw && soKw <= 350) {// 150 Kw kế (tổng 350 Kw)
+        tienDien = (500 * 50) + (650 * 50) + (850 * 150) + (1100 * (soKw - 200));
+
+    }
+    else if (350 < soKw) { //còn lại
+        tienDien = (500 * 50) + (650 * 50) + (850 * 150) + (1100 * 150) + (1300 * (soKw - 350));
+    }
+    else {
+        console.log("vui lòng nhập số điện ");
+    }
+    console.log(tienDien);
+
+    nametd.innerHTML = `<span> Tổng tiền điện của ${nguoiDung} là: </span>`;
+    result_td.innerHTML = `<span> ${tienDien} </span>`;
+
+}

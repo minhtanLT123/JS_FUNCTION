@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Function</title>
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- flowbite -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <!-- tailwind  -->
@@ -18,8 +15,8 @@
 <body>
     <div id="sidebar">
         <!-- navbar -->
-        <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-            <div class="px-3 py-3 lg:px-5 lg:pl-3">
+        <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
+            <div class="px-3 py-3 lg:px-5 lg:pl-3 bg-gray-100">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center justify-start rtl:justify-end">
                         <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
@@ -38,8 +35,13 @@
                             <span
                                 class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Bài
                                 tập JavaScript buổi 5 - Function </span>
+
                         </a>
+                        <a class="text-blue-700 underline" href="https://github.com/minhtanLT123/JS_FUNCTION"> Link
+                            github</a>
+
                     </div>
+
 
                     <div class="flex items-center">
                         <div class="flex items-center ms-3">
@@ -96,38 +98,34 @@
 
         <!-- sidebar  -->
         <aside id="logo-sidebar"
-            class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+            class="fixed top-0 left-0 z-40 w-30 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0"
             aria-label="Sidebar">
-            <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+            <div class="h-full pb-4 overflow-y-auto bg-sky-500/50">
                 <ul class="space-y-2 font-medium">
                     <li>
                         <button id="bt1" onclick="loadExercise('baiTap1')">
-                            <a href="#"
-                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg ">
                                 <span class="ms-3">Bài Tập 1</span>
                             </a>
                         </button>
                     </li>
                     <li>
                         <button id="bt2" onclick="loadExercise('baiTap2')">
-                            <a href="#"
-                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg ">
                                 <span class="flex-1 ms-3 whitespace-nowrap">bài tập 2</span>
                             </a>
                         </button>
                     </li>
                     <li>
                         <button id="bt3" onclick="loadExercise('baiTap3')">
-                            <a href="#"
-                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg ">
                                 <span class="flex-1 ms-3 whitespace-nowrap">Bài tập 3</span>
                             </a>
                         </button>
                     </li>
                     <li>
                         <button id="bt4" onclick="loadExercise('baiTap4')">
-                            <a href="#"
-                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg ">
                                 <span class="flex-1 ms-3 whitespace-nowrap">Bài tập 4</span>
                             </a>
                         </button>
@@ -141,10 +139,10 @@
 
     <!-- main view -->
     <div class="p-20 sm:ml-64">
-        <div class=" h-24 rounded-sm">
+        <div class=" rounded-sm">
             <p class="text-2xl ">
-            <div id="exerciseContainer">
-                <h1>Nội dung bài tập</h1>
+            <div id="exerciseContainer" class="text-xl">
+                <h1>Vui Lòng chọn một bài tập để tiếp tục!</h1>
             </div>
             </p>
         </div>

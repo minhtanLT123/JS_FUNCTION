@@ -2,40 +2,23 @@
 
     <div class="form-group flex flex-col gap-y-4 ">
         <div>
-            <h2>🕸️ Tính tiền cáp</h2>
+            <h2>🕸️ Bài tập 4: Tính tiền cáp</h2>
         </div>
 
-        <div class="flex flex-row gap-x-4 ">
-            <div class="">
-                <input type="number" id="days" placeholder="Điểm chuẩn"
-                    class="border-none focus:outline-none bg-white p-2 rounded shadow">
-            </div>
-            <div class=" border-none focus:outline-none bg-white p-2 rounded shadow">
-                <input list="khuvuc" name="khuvuc" placeholder="Chọn khu vực">
-                <datalist id="khuvuc">
-                    <option value="A">
-                    <option value="B">
-                    <option value="C">
-                </datalist>
-            </div>
-
-            <div>
-                <input list="doituong" name="doituong" placeholder="Chọn đối tượng"
-                    class="border-none focus:outline-none bg-white p-2 rounded shadow">
-                <datalist id="doituong">
-                    <option value="1">
-                    <option value="2">
-                    <option value="3">
-                </datalist>
-            </div>
-        </div>
         <div class="flex flex-row gap-x-4">
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow" type="number" id="days"
-                    placeholder="Điểm môn thứ 1"></div>
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow" type="number" id="days"
-                    placeholder="Điểm môn thứ 2"></div>
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow" type="number" id="days"
-                    placeholder="Điểm môn thứ 3"></div>
+            <div class="">
+                <input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" list="khachHang"
+                    id="khachHangInput" placeholder="Chọn loại khách hàng">
+                <datalist id="khachHang">
+                    <option value="Nhà Dân">
+                    <option value="Doanh nghiệp">
+
+                </datalist>
+            </div>
+            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
+                    id="days" placeholder="Nhập mã khách hàng"></div>
+            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
+                    id="days" placeholder="Số kê cao cấp"></div>
 
         </div>
         <div>

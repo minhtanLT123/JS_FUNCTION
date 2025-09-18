@@ -190,7 +190,7 @@ function tinhTienCap() {
         alert("Vui lòng chọn loại khách hàng");
     }
     document.getElementById("showmakh").innerHTML = `Mã khách hàng: ${maKH} ; `;
-    document.getElementById("tongtiencap").innerHTML = `Tổng tiền cáp là: ${tongTien}`;
+    document.getElementById("tongtiencap").innerHTML = `Tổng tiền cáp là: ${tongTien.toLocaleString('vi-VN', { style: 'currency', currency: 'USD' })}`;
 
 
 }

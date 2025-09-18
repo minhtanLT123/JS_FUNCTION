@@ -21,7 +21,7 @@ function loadExercise(type) {
             alert("Không tìm thấy bài tập!");
             return;
     }
-
+    //load trang con bằng fetch
     fetch(file)
         .then(response => {
             if (!response.ok) throw new Error("Không thể tải file HTML");
@@ -52,6 +52,9 @@ function tinhDiem() {
     console.log(diemMon_1);
     console.log(diemMon_2);
     console.log(diemMon_3);
+    if (!khuVuc || !doiTuong || !doiTuong) {
+        alert("Vui lòng điền đầy đủ thông tin!")
+    }
     // Điểm ưu tiên theo khu vực
     let diemUuTienKV = 0;
     if (khuVuc === "A") diemUuTienKV = 2;
@@ -92,6 +95,9 @@ function tinhTienDien() {
     let nguoiDung = document.getElementById("name_td").value;
     const soKw = document.getElementById("sokw").value * 1;
     let tienDien = document.getElementById("result_td") * 1;
+    if (!nguoiDung || !soKw) {
+        alert("Vui lòng điền đầy đủ thông tin!")
+    }
 
     if (soKw <= 50) { // 50 Kw đầu - tổng 50 Kw
         tienDien = 500 * soKw;
@@ -99,8 +105,6 @@ function tinhTienDien() {
     }
     else if (50 < soKw && soKw <= 100) { // 50 Kw kế (tổng 100 Kw)
         tienDien = (500 * 50) + (650 * (soKw - 50));
-
-
     }
     else if (100 < soKw && soKw <= 200) {// 100 Kw kế (tổng 200 Kw)
         tienDien = (500 * 50) + (650 * 50) + (850 * (soKw - 100));
@@ -130,6 +134,10 @@ function tinhThueTNCN() {
     const thuNhap = document.getElementById("thunhap").value * 1;
     const nguoiPT = document.getElementById("nguoiphuthuoc").value * 1;
     let thueTNCN = 0;
+    if (!nguoiTinhThue || !thuNhap || !nguoiPT) {
+        alert("vui lòng nhập đầy đủ thông tin!")
+    }
+
     if (thuNhap <= 60) { // đến 60 triệu - 5(%)
         thueTNCN = (thuNhap * 0.05) - nguoiPT * 1.6;
 
@@ -158,3 +166,46 @@ function tinhThueTNCN() {
     result_ttncn.innerHTML = `<span> có thuế thu nhập cá nhân là:  ${thueTNCN.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })} </span>`;
 
 }
+
+// bài tập 4: tính tiền cáp
+function tinhTienCap() {
+    const loaiKhach = document.getElementById("khachHangSelect").value;
+    const maKH = document.getElementById("makh").value;
+    const sokenhCC = document.getElementById("sokenhcc").value * 1;
+
+
+    let tongTien = 0;
+
+    if (loaiKhach === "Nhà Dân") {
+        tongTien = 4.5 + 20.5 + (7.5 * sokenhCC);
+
+    }
+    else if (loaiKhach === "Doanh nghiệp") {
+        let socongketnoi = document.getElementById("soketnoi").value * 1;
+        let tienthem = (socongketnoi - 10) * 5;
+        tongTien = 15 + 75 + (50 * sokenhCC) + tienthem;
+
+    }
+    else {
+        alert("Vui lòng chọn loại khách hàng");
+    }
+    document.getElementById("showmakh").innerHTML = `Mã khách hàng: ${maKH} ; `;
+    document.getElementById("tongtiencap").innerHTML = `Tổng tiền cáp là: ${tongTien}`;
+
+
+}
+
+
+// xử lý phần giao diện thẻ input số kết nối ở bài tập 4 tính tiền cap
+function toggleConnectionInput() {
+    const customerType = document.getElementById("khachHangSelect").value;
+    const connectionInput = document.getElementById("soketnoi");
+
+    if (customerType === "Doanh nghiệp") {
+        connectionInput.classList.remove("hidden");
+    } else {
+        connectionInput.classList.add("hidden");
+    }
+}
+
+

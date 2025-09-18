@@ -1,51 +1,57 @@
-<div class="container">
-
-    <div class="form-group flex flex-col gap-y-4 ">
-        <div>
-            <h1 class="font-semibold text-lg">🕸️ Bài tập 4: Tính tiền cáp</h1>
+<div class="form-group flex flex-col gap-y-4 ">
+    <div>
+        <h1 class="font-semibold text-lg">🕸️ Bài tập 4: Tính tiền cáp</h1>
+    </div>
+    <div>
+        ❖ Viết chương trình tính hóa đơn khách hàng cho một công ty cáp. Có 2 loại khách hàng: <br>
+        Nhà dân và doanh nghiệp. Có 2 mức giá tính tiền cáp: <br>
+        1. Nhà dân: <br>
+        • Phí xử lý hóa đơn: 4.5$<br>
+        • Phí dịch vụ cơ bản: 20.5$<br>
+        • Thuê kênh cao cấp: 7.5$ / kênh<br>
+        2. Doanh nghiệp<br>
+        • Phí xử lý hóa đơn: 15$<br>
+        • Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$ / kết nối<br>
+        • Thuê kênh cao cấp: 50$ / kênh<br>
+        ❖ Chương trình cho phép nhập vào Mã khách hàng, loại khách hàng, số kết nối, số kênh<br>
+        cao cấp. Nếu chọn loại khách hàng là Doanh nghiệp ô nhập số kết nối sẽ hiện lên, nếu<br>
+        chọn loại khách hàng là nhà dân thì ô nhập kết nối sẽ ẩn đi hoặc disabled<br>
+    </div>
+    <hr>
+    <div class="flex flex-row gap-x-4">
+        <div class="">
+            <select id="khachHangSelect"
+                class="appearance-none border-none focus:outline-none bg-white p-2 rounded shadow text-base w-45"
+                onchange="toggleConnectionInput()">
+                <option value="">Chọn khách hàng</option>
+                <option value="Nhà Dân">Nhà Dân</option>
+                <option value="Doanh nghiệp">Doanh nghiệp</option>
+            </select>
         </div>
-        <div>
-            ❖ Viết chương trình tính hóa đơn khách hàng cho một công ty cáp. Có 2 loại khách hàng: <br>
-            Nhà dân và doanh nghiệp. Có 2 mức giá tính tiền cáp: <br>
-            1. Nhà dân: <br>
-            • Phí xử lý hóa đơn: 4.5$<br>
-            • Phí dịch vụ cơ bản: 20.5$<br>
-            • Thuê kênh cao cấp: 7.5$ / kênh<br>
-            2. Doanh nghiệp<br>
-            • Phí xử lý hóa đơn: 15$<br>
-            • Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$ / kết nối<br>
-            • Thuê kênh cao cấp: 50$ / kênh<br>
-            ❖ Chương trình cho phép nhập vào Mã khách hàng, loại khách hàng, số kết nối, số kênh<br>
-            cao cấp. Nếu chọn loại khách hàng là Doanh nghiệp ô nhập số kết nối sẽ hiện lên, nếu<br>
-            chọn loại khách hàng là nhà dân thì ô nhập kết nối sẽ ẩn đi hoặc disabled<br>
-        </div>
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="text" id="makh"
+                placeholder="Nhập mã khách hàng"></div>
+        <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
+                id="sokenhcc" placeholder="Số kênh cao cấp"></div>
+        <div><input class="hidden border-none focus:outline-none bg-white p-2 rounded shadow text-base disabled"
+                type="number" id="soketnoi" placeholder="Số kết nối"></div>
 
-        <div class="flex flex-row gap-x-4">
-            <div class="">
-                <input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" list="khachHang"
-                    id="khachHangInput" placeholder="Chọn loại khách hàng">
-                <datalist id="khachHang">
-                    <option value="Nhà Dân">
-                    <option value="Doanh nghiệp">
 
-                </datalist>
-            </div>
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
-                    id="days" placeholder="Nhập mã khách hàng"></div>
-            <div><input class="border-none focus:outline-none bg-white p-2 rounded shadow text-base" type="number"
-                    id="days" placeholder="Số kê cao cấp"></div>
-
-        </div>
-        <div>
-            <button onclick="calcSalary()"
-                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">Kết
-                Quả</button>
-        </div>
-
-        <div id="result" class="result">
-            <p>👉</p>
-        </div>
 
     </div>
+    <div>
+        <button onclick="tinhTienCap()"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md transition duration-300">Kết
+            Quả</button>
+    </div>
+
+    <div id="" class="result">
+        <p>👉
+            <span id="showmakh"></span>
+            <span id="tongtiencap"></span>
+
+        </p>
+    </div>
+
+
 
 </div>

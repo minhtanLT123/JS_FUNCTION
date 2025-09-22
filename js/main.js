@@ -208,4 +208,16 @@ function toggleConnectionInput() {
     }
 }
 
+// xử lý xem đề bài, khi click vào dấu mở rộng
+function xemdebai() {
+    const xemdebaiSelect = document.getElementById("xemdebaiSelect").value;
+    const debai = document.getElementById("debai");
+    if (xemdebaiSelect === "open") {
+        debai.classList.remove("hidden");
+    } else {
+        debai.classList.add("hidden");
+    }
+
+}
+
 

@@ -15,8 +15,8 @@
 <body>
     <div id="sidebar">
         <!-- navbar -->
-        <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
-            <div class="px-3 py-3 lg:px-5 lg:pl-3 bg-gray-100">
+        <nav class="fixed top-0 z-50 w-full bg-white border-b ">
+            <div class="px-3 py-3 lg:px-5 lg:pl-3 bg-amber-200">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center justify-start rtl:justify-end">
                         <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
@@ -98,35 +98,35 @@
 
         <!-- sidebar  -->
         <aside id="logo-sidebar"
-            class="fixed top-0 left-0 z-40 w-30 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0"
+            class="fixed top-0 left-0 z-40 w-50 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0"
             aria-label="Sidebar">
-            <div class="h-full pb-4 overflow-y-auto bg-sky-500/50">
-                <ul class="space-y-2 font-medium">
+            <div class="text-xl h-full pb-4 overflow-y-auto bg-sky-500/50">
+                <ul class="mt-10 space-y-2 font-medium">
                     <li>
-                        <button id="bt1" onclick="loadExercise('baiTap1')">
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg ">
-                                <span class="ms-3">Bài Tập 1</span>
+                        <button class="w-full" id="bt1" onclick="loadExercise('baiTap1')">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-sky-700">
+                                <span class="flex-1 whitespace-nowrap">Bài Tập 1</span>
                             </a>
                         </button>
                     </li>
                     <li>
-                        <button id="bt2" onclick="loadExercise('baiTap2')">
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg ">
-                                <span class="flex-1 ms-3 whitespace-nowrap">bài tập 2</span>
+                        <button class="w-full" id="bt2" onclick="loadExercise('baiTap2')">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-sky-700 ">
+                                <span class="flex-1 whitespace-nowrap">bài tập 2</span>
                             </a>
                         </button>
                     </li>
                     <li>
-                        <button id="bt3" onclick="loadExercise('baiTap3')">
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg ">
-                                <span class="flex-1 ms-3 whitespace-nowrap">Bài tập 3</span>
+                        <button class="w-full" id="bt3" onclick="loadExercise('baiTap3')">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-sky-700">
+                                <span class="flex-1 whitespace-nowrap">Bài tập 3</span>
                             </a>
                         </button>
                     </li>
                     <li>
-                        <button id="bt4" onclick="loadExercise('baiTap4')">
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg ">
-                                <span class="flex-1 ms-3 whitespace-nowrap">Bài tập 4</span>
+                        <button class="w-full" id="bt4" onclick="loadExercise('baiTap4')">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-sky-700 ">
+                                <span class="flex-1 whitespace-nowrap">Bài tập 4</span>
                             </a>
                         </button>
                     </li>

@@ -4,6 +4,15 @@
         <h1 class="font-semibold text-lg">📋 Bài tập 1: Quản lý tuyển sinh</h1>
     </div>
     <div>
+        <select name="" id="xemdebaiSelect" onchange="xemdebai()">
+
+            <option value="close">Thu gọn</option>
+            <option value="open">xem đề bài</option>
+
+        </select>
+
+    </div>
+    <div id="debai" class="hidden">
         <p>Trong kỳ thi tuyển, một thí sinh sẽ trúng truyển nếu có điểm tổng kết lớn hơn hoặc bằng điểm chuẩn và
             không có môn nào điểm 0.</br>
             - Điểm tổng kết là tổng điểm của 3 môn thi và điểm ưu tiên. <br>
@@ -11,6 +20,7 @@
 
         <img class="w-100" src="/images/diemUuTien.png" alt="">
     </div>
+
     <hr>
     <div class="flex flex-row gap-x-4 ">
         <div>

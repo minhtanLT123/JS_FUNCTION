@@ -1,1 +1,2 @@
-# JS_FUNCTION_(bài tập buổi 5)
+# JS_FUNCTION
+BÀI TẬP JS BUỔI 5
